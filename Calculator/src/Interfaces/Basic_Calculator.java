@@ -57,7 +57,7 @@ public class Basic_Calculator extends javax.swing.JFrame {
         setTitle("Calculator");
 
         uiPanelCalculator.setFont(new java.awt.Font("Century751 SeBd BT", 0, 36)); // NOI18N
-        uiPanelCalculator.setText("                                  ");
+        uiPanelCalculator.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jButton1.setText("2");
 
