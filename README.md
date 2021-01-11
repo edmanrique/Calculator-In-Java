@@ -1,6 +1,4 @@
-# Title
-
-Creation of a calculator using Java.
+# Creation of a calculator using Java.
 
 ![](https://miro.medium.com/max/8642/1*iIXOmGDzrtTJmdwbn7cGMw.png)
 
