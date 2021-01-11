@@ -84,6 +84,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 153, 204));
         jButton2.setText("2");
+        jButton2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -93,6 +94,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 153, 204));
         jButton4.setText("3");
+        jButton4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -102,10 +104,12 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 153, 204));
         jButton5.setText("5");
+        jButton5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jButton7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 153, 204));
         jButton7.setText("4");
+        jButton7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -115,10 +119,12 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         jButton8.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton8.setForeground(new java.awt.Color(0, 153, 204));
         jButton8.setText("0");
+        jButton8.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jButton10.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton10.setForeground(new java.awt.Color(0, 153, 204));
         jButton10.setText("7");
+        jButton10.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -128,10 +134,12 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         jButton11.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton11.setForeground(new java.awt.Color(0, 153, 204));
         jButton11.setText("8");
+        jButton11.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jButton9.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton9.setForeground(new java.awt.Color(0, 153, 204));
         jButton9.setText("6");
+        jButton9.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -141,6 +149,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         jButton12.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton12.setForeground(new java.awt.Color(0, 153, 204));
         jButton12.setText("9");
+        jButton12.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
