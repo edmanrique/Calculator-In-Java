@@ -172,17 +172,15 @@
                               <Component id="jButton10" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jButton13" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                   <Component id="jButton19" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                   <Component id="jButton20" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                   <Component id="jButton21" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jButton8" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="jButton22" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jButton8" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jButton22" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jButton15" min="-2" pref="198" max="-2" attributes="0"/>
@@ -396,6 +394,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton13">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="99" red="99" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="="/>
           </Properties>
           <Events>
@@ -441,7 +445,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton19">
           <Properties>
-            <Property name="text" type="java.lang.String" value="X"/>
+            <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton19ActionPerformed"/>
@@ -465,6 +469,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton22">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="99" red="0" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="."/>
           </Properties>
         </Component>
