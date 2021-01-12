@@ -123,17 +123,11 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jButton20" min="-2" pref="69" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButton21" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="jButton23" min="-2" pref="147" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jButton24" min="-2" pref="147" max="-2" attributes="0"/>
+                                  <Component id="jButton23" min="-2" pref="147" max="-2" attributes="0"/>
+                                  <Component id="factorial_button" min="-2" pref="147" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jButton25" min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="exponent_button" min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="square_root_button" min="-2" pref="147" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="12" max="32767" attributes="0"/>
                           <Component id="AC_Button" min="-2" pref="57" max="-2" attributes="0"/>
@@ -161,7 +155,7 @@
                               <Component id="two_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               <Component id="three_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               <Component id="sum_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="jButton25" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="exponent_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -169,7 +163,7 @@
                               <Component id="five_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               <Component id="six_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               <Component id="less_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="jButton24" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="factorial_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -186,8 +180,7 @@
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="equals_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                   <Component id="mutiply_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="jButton20" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="jButton21" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="square_root_button" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                               </Group>
                               <Component id="zero_button" alignment="0" max="32767" attributes="0"/>
                               <Component id="dot_button" alignment="0" max="32767" attributes="0"/>
@@ -479,22 +472,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mutiply_buttonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton20">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="("/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton20ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton21">
-          <Properties>
-            <Property name="text" type="java.lang.String" value=")"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton21ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="dot_button">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -514,20 +491,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton23ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton24">
+        <Component class="javax.swing.JButton" name="factorial_button">
           <Properties>
             <Property name="text" type="java.lang.String" value="X !"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton24ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="factorial_buttonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton25">
+        <Component class="javax.swing.JButton" name="exponent_button">
           <Properties>
             <Property name="text" type="java.lang.String" value="^"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton25ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exponent_buttonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="value_one_label">
@@ -557,6 +534,14 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="square_root_button">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x221a;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="square_root_buttonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -20,7 +20,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
     public double first_value;
     public double second_value;
     public double result;
-    public A_Calculator Operations;
+    public ACalculator Operations;
 
     /**
      * Creates new form Advanced_Calculator
@@ -29,7 +29,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         initComponents();
         pat = Pattern.compile("[a-zA-Z]{1,}");
         count = 0;
-        Operations = new A_Calculator();
+        Operations = new ACalculator();
     }
 
     @SuppressWarnings("unchecked")
@@ -57,14 +57,13 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         less_button = new javax.swing.JButton();
         divide_button = new javax.swing.JButton();
         mutiply_button = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
         dot_button = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
+        factorial_button = new javax.swing.JButton();
+        exponent_button = new javax.swing.JButton();
         value_one_label = new javax.swing.JLabel();
         operator_label = new javax.swing.JLabel();
+        square_root_button = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -249,20 +248,6 @@ public class Advanced_Calculator extends javax.swing.JFrame {
             }
         });
 
-        jButton20.setText("(");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
-            }
-        });
-
-        jButton21.setText(")");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
-            }
-        });
-
         dot_button.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         dot_button.setForeground(new java.awt.Color(0, 153, 0));
         dot_button.setText(".");
@@ -274,17 +259,17 @@ public class Advanced_Calculator extends javax.swing.JFrame {
             }
         });
 
-        jButton24.setText("X !");
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
+        factorial_button.setText("X !");
+        factorial_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
+                factorial_buttonActionPerformed(evt);
             }
         });
 
-        jButton25.setText("^");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
+        exponent_button.setText("^");
+        exponent_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
+                exponent_buttonActionPerformed(evt);
             }
         });
 
@@ -297,6 +282,13 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         operator_label.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         operator_label.setForeground(new java.awt.Color(51, 204, 0));
         operator_label.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        square_root_button.setText("√");
+        square_root_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                square_root_buttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JPanelLayout = new javax.swing.GroupLayout(JPanel);
         JPanel.setLayout(JPanelLayout);
@@ -351,14 +343,10 @@ public class Advanced_Calculator extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(JPanelLayout.createSequentialGroup()
-                                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(factorial_button, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(exponent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(square_root_button, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                         .addComponent(AC_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19))
@@ -380,14 +368,14 @@ public class Advanced_Calculator extends javax.swing.JFrame {
                             .addComponent(two_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(three_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sum_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(exponent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(four_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(five_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(six_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(less_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(factorial_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -401,8 +389,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
                             .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(equals_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(mutiply_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(square_root_button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(zero_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dot_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(AC_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -459,7 +446,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         try {
             if (operation_field.getText() == null || operation_field.getText().equals("")) {
 
-            } else {
+            } else if (!operation_field.getText().contains("(") || !operation_field.getText().contains(")")) {
                 switch (operator_label.getText().charAt(1)) {
                     case '+':
 
@@ -471,8 +458,8 @@ public class Advanced_Calculator extends javax.swing.JFrame {
                             value_one_label.setText("");
                             operator_label.setText("");
                             count--;
-                            break;
                         }
+                        break;
 
                     case '-':
                         if (value_one_label.getText() == null || value_one_label.getText().equals("")) {
@@ -483,25 +470,53 @@ public class Advanced_Calculator extends javax.swing.JFrame {
                             value_one_label.setText("");
                             operator_label.setText("");
                             count--;
-                            break;
                         }
                         break;
 
                     case '*':
-                        operation_field.setText(String.valueOf(Operations.multiplication(first_value, second_value)));
-                        value_one_label.setText("");
+                        if (value_one_label.getText() == null || value_one_label.getText().equals("")) {
+
+                        } else {
+                            second_value = Double.parseDouble(operation_field.getText());
+                            operation_field.setText(String.valueOf(Operations.multiplication(first_value, second_value)));
+                            value_one_label.setText("");
+                            operator_label.setText("");
+                            count--;
+                        }
                         break;
 
                     case '/':
-                        operation_field.setText(String.valueOf(Operations.division(first_value, second_value)));
-                        value_one_label.setText("");
+                        if (value_one_label.getText() == null || value_one_label.getText().equals("")) {
+
+                        } else {
+                            second_value = Double.parseDouble(operation_field.getText());
+                            operation_field.setText(String.valueOf(Operations.division(first_value, second_value)));
+                            value_one_label.setText("");
+                            operator_label.setText("");
+                            count--;
+                        }
+                        break;
+
+                    case '^':
+                        if (value_one_label.getText() == null || value_one_label.getText().equals("")) {
+
+                        } else {
+                            second_value = Double.parseDouble(operation_field.getText());
+                            operation_field.setText(String.valueOf(Operations.exponent(first_value, second_value)));
+                            value_one_label.setText("");
+                            operator_label.setText("");
+                            count--;
+                        }
                         break;
 
                     default:
                         operation_field.setText("Syntax Error");
                         break;
                 }
+            } else {
+
             }
+
         } catch (java.lang.StringIndexOutOfBoundsException e) {
 
         }
@@ -509,6 +524,8 @@ public class Advanced_Calculator extends javax.swing.JFrame {
 
     private void AC_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AC_ButtonActionPerformed
         operation_field.setText("");
+        operator_label.setText("");
+        value_one_label.setText("");
     }//GEN-LAST:event_AC_ButtonActionPerformed
 
     private void sum_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sum_buttonActionPerformed
@@ -554,32 +571,80 @@ public class Advanced_Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_less_buttonActionPerformed
 
     private void divide_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divide_buttonActionPerformed
-        // TODO add your handling code here:
+        if (operation_field.getText() == null || operation_field.getText().equals("")) {
+
+        } else {
+            if (count == 0) {
+                first_value = Double.parseDouble(operation_field.getText());
+                value_one_label.setText(first_value + "");
+                operator_label.setText(" / ");
+                operation_field.setText("");
+                count++;
+            } else {
+                first_value = Double.parseDouble(value_one_label.getText());
+                second_value = Double.parseDouble(operation_field.getText());
+                result = Operations.division(first_value, second_value);
+                operation_field.setText("");
+                value_one_label.setText(result + "");
+            }
+
+        }
     }//GEN-LAST:event_divide_buttonActionPerformed
 
     private void mutiply_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mutiply_buttonActionPerformed
-        // TODO add your handling code here:
+        if (operation_field.getText() == null || operation_field.getText().equals("")) {
+
+        } else {
+            if (count == 0) {
+                first_value = Double.parseDouble(operation_field.getText());
+                value_one_label.setText(first_value + "");
+                operator_label.setText(" * ");
+                operation_field.setText("");
+                count++;
+            } else {
+                first_value = Double.parseDouble(value_one_label.getText());
+                second_value = Double.parseDouble(operation_field.getText());
+                result = Operations.multiplication(first_value, second_value);
+                operation_field.setText("");
+                value_one_label.setText(result + "");
+            }
+
+        }
     }//GEN-LAST:event_mutiply_buttonActionPerformed
-
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton23ActionPerformed
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24ActionPerformed
+    private void factorial_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factorial_buttonActionPerformed
+        if (operation_field.getText() == null || operation_field.getText().equals("")) {
 
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+        } else {
+            first_value = Double.parseDouble(operation_field.getText());
+            operation_field.setText(String.valueOf(Operations.factorial(first_value)));
+        }
+    }//GEN-LAST:event_factorial_buttonActionPerformed
+
+    private void exponent_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponent_buttonActionPerformed
+        if (operation_field.getText() == null || operation_field.getText().equals("")) {
+
+        } else {
+            if (count == 0) {
+                first_value = Double.parseDouble(operation_field.getText());
+                value_one_label.setText(first_value + "");
+                operator_label.setText(" ^ ");
+                operation_field.setText("");
+                count++;
+            } else {
+                first_value = Double.parseDouble(value_one_label.getText());
+                second_value = Double.parseDouble(operation_field.getText());
+                result = Operations.exponent(first_value, second_value);
+                operation_field.setText("");
+                value_one_label.setText(result + "");
+            }
+
+        }
+    }//GEN-LAST:event_exponent_buttonActionPerformed
 
     private void one_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_one_buttonActionPerformed
         operation_field.setText(operation_field.getText() + "1");
@@ -611,12 +676,22 @@ public class Advanced_Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_operation_fieldKeyPressed
 
     private void operation_fieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_operation_fieldKeyReleased
+        pat = Pattern.compile("[a-zA-Z]{1,}");
         mat = pat.matcher(operation_field.getText());
 
         if (mat.find()) {
             operation_field.setText("Syntax Error");
         }
     }//GEN-LAST:event_operation_fieldKeyReleased
+
+    private void square_root_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_square_root_buttonActionPerformed
+        if (operation_field.getText() == null || operation_field.getText().equals("")) {
+
+        } else {
+            double op = Operations.square_root(Double.parseDouble(operation_field.getText()));
+            operation_field.setText(String.valueOf(op));
+        }
+    }//GEN-LAST:event_square_root_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -660,14 +735,12 @@ public class Advanced_Calculator extends javax.swing.JFrame {
     private javax.swing.JButton dot_button;
     private javax.swing.JButton eight_button;
     private javax.swing.JButton equals_button;
+    private javax.swing.JButton exponent_button;
+    private javax.swing.JButton factorial_button;
     private javax.swing.JButton five_button;
     private javax.swing.JButton four_button;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton less_button;
@@ -678,6 +751,7 @@ public class Advanced_Calculator extends javax.swing.JFrame {
     private javax.swing.JLabel operator_label;
     private javax.swing.JButton seven_button;
     private javax.swing.JButton six_button;
+    private javax.swing.JButton square_root_button;
     private javax.swing.JButton sum_button;
     private javax.swing.JButton three_button;
     private javax.swing.JButton two_button;
