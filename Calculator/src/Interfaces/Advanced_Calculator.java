@@ -274,6 +274,11 @@ public class Advanced_Calculator extends javax.swing.JFrame {
         dot_button.setForeground(new java.awt.Color(0, 153, 0));
         dot_button.setText(".");
         dot_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dot_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dot_buttonActionPerformed(evt);
+            }
+        });
 
         percent_button.setText("%");
         percent_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -843,6 +848,13 @@ public class Advanced_Calculator extends javax.swing.JFrame {
     private void clear_history_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear_history_buttonActionPerformed
         operations_history.setText("");
     }//GEN-LAST:event_clear_history_buttonActionPerformed
+
+    private void dot_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dot_buttonActionPerformed
+        if(!operation_field.getText().contains(".")){
+            operation_field.setText(operation_field.getText() + ".");
+        }
+        
+    }//GEN-LAST:event_dot_buttonActionPerformed
 
     /**
      * @param args the command line arguments
